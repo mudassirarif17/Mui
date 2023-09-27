@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import { Button, Typography } from '@mui/material';
+import { Button, Typography, TextField } from '@mui/material';
 
 function App() {
   return (
@@ -14,6 +14,16 @@ function App() {
       <Button variant='text' sx={{margin : "30px"}}>Click Me</Button>
       <Button variant='contained' color='success' disabled size='large'>Click Me</Button>
       <Button onClick={()=> alert("You clicked the button")} variant='outlined'>Click Me for action</Button>
+
+      <br/>
+      <br/>
+
+      {/* <input type='text' placeholder='Enter Your Name : '/> */}
+      {/*3. Text field is used to get input from user  */}
+      <TextField type="text" placeholder='Enter Your name ' variant='standard'/>
+      <TextField type="email" placeholder='Enter Your Email ' variant='outlined'/>
+      <TextField type="password" placeholder='Enter Your password ' variant='filled'/>
+      
     </div>
   );
 }
