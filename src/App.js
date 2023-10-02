@@ -1,4 +1,6 @@
+import Cards from './components/Cards';
 import Form from './components/Form';
+import Navbar from './components/Navbar';
 import logo from './logo.svg';
 import { Button, Typography, TextField } from '@mui/material';
 
@@ -7,7 +9,7 @@ function App() {
     <div>
       {/*1. Typography */}
       {/* <Typography variant='h1' sx={{color : "red" , background : "blue"}} component={"h2"} mt={20}>Aptech Garden</Typography> */}
-      <h1>MUI Tutorial</h1>
+      {/* <h1>MUI Tutorial</h1> */}
       {/* <p>Pakistan is my country . I love pakistan </p>  */}
 
       {/*2. Buttons in MUi */}
@@ -29,7 +31,9 @@ function App() {
 
 
       {/* 3. forms */}
-      <Form/>
+      {/* <Form/> */}
+      <Navbar/>
+      <Cards/>
     </div>
   );
 }
