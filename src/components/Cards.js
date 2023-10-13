@@ -1,6 +1,7 @@
-import React from 'react'
+import React , {useState} from 'react'
 import {Button, Card, CardActions, CardContent, CardMedia, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Typography} from "@mui/material"
 const Cards = () => {
+  const [open , setOpen] = useState(true);
   return (
     <div>
       <Card sx={{width : 300 , marginTop : 10}}>
@@ -17,10 +18,10 @@ const Cards = () => {
         </CardContent>
         <CardActions>
             <Button size='small' color='primary'>Share</Button>
-            <Button size='small' color='primary'>Delete</Button>
+            <Button size='small' onClick={()=>setOpen(true)} color='primary'>Delete</Button>
         </CardActions>
 
-        <Dialog open={true}>
+        <Dialog open={open} onClose={()=>setOpen(false)}>
             <DialogTitle>Are You sure</DialogTitle>
             <DialogContent>
                 <DialogContentText>
@@ -28,7 +29,7 @@ const Cards = () => {
                 </DialogContentText>
             </DialogContent>
             <DialogActions>
-                <Button>Cancel</Button>
+                <Button onClick={()=>setOpen(false)}>Cancel</Button>
                 <Button>Delete</Button>
             </DialogActions>
         </Dialog>
