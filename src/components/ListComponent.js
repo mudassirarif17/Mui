@@ -5,13 +5,15 @@ const ListComponent = () => {
     const courses = ["MERN" , "React" , "Express" , "Node"];
   return (
     <div>
-      <List sx={{width : 250 , background : "gray"}}>
-            <ListItemButton>{">"}</ListItemButton>
-        {courses.map((course)=>(<ListItem>
-            <ListItemText primary={course}/>
-        </ListItem>))}
-        
-      </List>
+      <List>
+            {
+                courses.map((course)=>(
+                    <ListItemButton >
+                        <ListItemText primary={course}></ListItemText>
+                    </ListItemButton>
+                ))
+            }
+        </List>
     </div>
   )
 }
